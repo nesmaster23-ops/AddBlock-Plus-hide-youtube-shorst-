@@ -1,23 +1,41 @@
-! ===============================
-!  YOUTUBE SHORTS — ABP VERSION
-! ===============================
+[Adblock Plus 3.1]
+! Title: Hide YouTube Shorts (ABP-compatible)
+! Description: Version compatible con Adblock Plus de la lista original de uBlock Origin
+! Version: 2025.8.31-abp
+! Last modified: 2025-08-31 22:38
+! Expires: 2 weeks
+! Homepage: https://github.com/gijsdev/ublock-hide-yt-shorts
+! Note: Todas las reglas que usan :has(), :has-text(), :matches-path(), :upward() fueron removidas porque ABP no las soporta.
 
-! Ocultar cualquier enlace que apunte a Shorts
-youtube.com##a[href*="/shorts/"]
+! ============================
+! REGLAS COMPATIBLES CON ABP
+! ============================
+
+! Ocultar cualquier enlace que lleve a Shorts
+www.youtube.com##a[href*="/shorts/"]
 m.youtube.com##a[href*="/shorts/"]
 
-! Ocultar cualquier card cuyo link principal sea un Short
-youtube.com##a[href*="/shorts/"] img
-youtube.com##a[href*="/shorts/"] span
-youtube.com##a[href*="/shorts/"] div
+! Ocultar contenido dentro de enlaces a Shorts
+www.youtube.com##a[href*="/shorts/"] *
+m.youtube.com##a[href*="/shorts/"] *
 
-m.youtube.com##a[href*="/shorts/"] img
-m.youtube.com##a[href*="/shorts/"] span
-m.youtube.com##a[href*="/shorts/"] div
-
-! Ocultar chips de Shorts (botones tipo "Shorts")
-youtube.com##a[href="/shorts"]
+! Ocultar chip/botón Shorts
+www.youtube.com##a[href="/shorts"]
 m.youtube.com##a[href="/shorts"]
 
-! Ocultar la sección de Shorts en la pantalla principal usando su URL interna
+! Bloquear acceso a la página de Shorts
 ||youtube.com/shorts^
+||m.youtube.com/shorts^
+
+! ============================
+! FIN DE REGLAS COMPATIBLES
+! ============================
+
+! Las siguientes reglas fueron eliminadas por incompatibilidad con Adblock Plus:
+! (Esta sección es SOLO informativa; no afecta el funcionamiento.)
+
+! - Cualquier regla con :has()
+! - Cualquier regla con :has-text()
+! - Cualquier regla con :matches-path()
+! - Cualquier regla con :upward()
+! - Selectores de WebComponents (ytd-*, ytm-*) no son fiables en ABP
