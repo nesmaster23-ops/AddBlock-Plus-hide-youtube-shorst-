@@ -1,0 +1,49 @@
+! =============================
+!   Hide YouTube Shorts (ABP)
+! =============================
+
+! Ocultar la pestaña "Shorts" en la barra lateral (desktop)
+www.youtube.com##ytd-guide-entry-renderer[active-content-style="SHORTS"]
+www.youtube.com##ytd-guide-entry-renderer [href="/shorts"]
+
+! Ocultar el elemento del mini-sidebar (tablet)
+www.youtube.com##ytd-mini-guide-entry-renderer [href="/shorts"]
+
+! Ocultar el menú superior de Shorts (chips y botones destacados)
+www.youtube.com##yt-chip-cloud-chip-renderer[chip-style="SHORTS"]
+www.youtube.com##yt-chip-cloud-chip-renderer a[href*="/shorts"]
+
+! Ocultar secciones horizontales dedicadas a Shorts
+www.youtube.com##ytd-rich-section-renderer[content-style="SHORTS"]
+www.youtube.com##ytd-reel-shelf-renderer
+www.youtube.com##ytd-reel-shelf-renderer[is-shorts]
+www.youtube.com##ytd-reel-shelf-renderer[lockup-style]
+
+! Ocultar miniaturas detectadas como Shorts por atributo
+www.youtube.com##ytd-thumbnail-overlay-time-status-renderer[overlay-style="SHORTS"]
+www.youtube.com##ytd-thumbnail-overlay-side-panel-renderer[overlay-style="SHORTS"]
+
+! Ocultar Shorts dentro de listados generales
+www.youtube.com##a[href^="/shorts/"]
+www.youtube.com##ytd-video-renderer a[href^="/shorts/"]
+www.youtube.com##ytd-rich-item-renderer a[href^="/shorts/"]
+www.youtube.com##ytd-grid-video-renderer a[href^="/shorts/"]
+
+! =============================
+!   MOBILE (m.youtube.com)
+! =============================
+
+! Ocultar botón de Shorts en la barra inferior
+m.youtube.com##ytm-pivot-bar-item-renderer[pivot-identifier="pivot_shorts"]
+m.youtube.com##ytm-pivot-bar-item-renderer a[href="/shorts"]
+
+! Ocultar remixes de Shorts y secciones de Shorts
+m.youtube.com##ytm-reel-shelf-renderer
+m.youtube.com##ytm-shorts-lockup-view-model
+m.youtube.com##a[href^="/shorts/"]
+
+! Ocultar miniaturas marcadas como Shorts
+m.youtube.com##ytm-video-with-context-renderer [data-style="SHORTS"]
+
+! Ocultar chips relacionados con Shorts
+m.youtube.com##ytm-chip-cloud-chip-renderer a[href="/shorts"]
