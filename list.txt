@@ -12,3 +12,5 @@ www.youtube.com##ytm-shorts-lockup-view-model
 www.youtube.com##ytm-shorts-lockup-view-model-v2
 www.youtube.com##.shortsLockupViewModelHost
 ||youtube.com/shorts/*$document
+youtube.com###rich-shelf-header
+youtube.com##.style-scope.ytd-rich-shelf-renderer
