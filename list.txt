@@ -27,15 +27,12 @@ m.youtube.com##a[href="/shorts"]
 ||youtube.com/shorts^
 ||m.youtube.com/shorts^
 
-! ============================
-! FIN DE REGLAS COMPATIBLES
-! ============================
+youtube.com##ytd-rich-shelf-renderer:has(a[href^="/shorts/"])
+youtube.com##ytd-rich-item-renderer:has(a[href^="/shorts/"])
+youtube.com##ytd-grid-video-renderer:has(a[href^="/shorts/"])
 
-! Las siguientes reglas fueron eliminadas por incompatibilidad con Adblock Plus:
-! (Esta sección es SOLO informativa; no afecta el funcionamiento.)
+youtube.com##a#thumbnail[href^="/shorts/"]
+youtube.com##ytd-reel-shelf-renderer
+youtube.com##ytd-reel-item-renderer
 
-! - Cualquier regla con :has()
-! - Cualquier regla con :has-text()
-! - Cualquier regla con :matches-path()
-! - Cualquier regla con :upward()
-! - Selectores de WebComponents (ytd-*, ytm-*) no son fiables en ABP
+youtube.com##ytd-guide-entry-renderer:has([title="Shorts"])
