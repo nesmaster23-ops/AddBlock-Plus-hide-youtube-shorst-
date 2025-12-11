@@ -7,32 +7,8 @@
 ! Homepage: https://github.com/gijsdev/ublock-hide-yt-shorts
 ! Note: Todas las reglas que usan :has(), :has-text(), :matches-path(), :upward() fueron removidas porque ABP no las soporta.
 
-! ============================
-! REGLAS COMPATIBLES CON ABP
-! ============================
-
-! Ocultar cualquier enlace que lleve a Shorts
-www.youtube.com##a[href*="/shorts/"]
-m.youtube.com##a[href*="/shorts/"]
-
-! Ocultar contenido dentro de enlaces a Shorts
-www.youtube.com##a[href*="/shorts/"] *
-m.youtube.com##a[href*="/shorts/"] *
-
-! Ocultar chip/botón Shorts
-www.youtube.com##a[href="/shorts"]
-m.youtube.com##a[href="/shorts"]
-
-! Bloquear acceso a la página de Shorts
-||youtube.com/shorts^
-||m.youtube.com/shorts^
-
-youtube.com##ytd-rich-shelf-renderer:has(a[href^="/shorts/"])
-youtube.com##ytd-rich-item-renderer:has(a[href^="/shorts/"])
-youtube.com##ytd-grid-video-renderer:has(a[href^="/shorts/"])
-
-youtube.com##a#thumbnail[href^="/shorts/"]
-youtube.com##ytd-reel-shelf-renderer
-youtube.com##ytd-reel-item-renderer
-
-youtube.com##ytd-guide-entry-renderer:has([title="Shorts"])
+www.youtube.com##ytd-reel-shelf-renderer
+www.youtube.com##ytm-shorts-lockup-view-model
+www.youtube.com##ytm-shorts-lockup-view-model-v2
+www.youtube.com##.shortsLockupViewModelHost
+||youtube.com/shorts/*$document
